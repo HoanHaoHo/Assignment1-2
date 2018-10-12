@@ -14,9 +14,9 @@ namespace Assignment1_2.Models
 
         [InverseProperty("Employee")]
         public ICollection<Sale> Sales { get; set; }
-
-        [InverseProperty("EmployeeApprove")]
-        public ICollection<Sale> ForSales { get; set; }
-
+        public Employee()
+        {
+            Sales = new HashSet<Sale>();
+        }
     }
 }
