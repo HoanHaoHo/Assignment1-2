@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -29,5 +31,11 @@ namespace Assignment1_2.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<StoreLocation> StoreLocations { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
+
 }
